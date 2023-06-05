@@ -1,15 +1,15 @@
-import axios from "axios";
+import axios from 'axios';
 export const addDataToMockAPI = async (data, endpoint) => {
   try {
     const response = await axios.post(
       `https://646bb7ca7d3c1cae4ce43282.mockapi.io/api/logic/${endpoint}`,
       data
     );
-    console.log("Дані успішно додані до MockAPI:", response.data);
+    console.log('Дані успішно додані до MockAPI:', response.data);
     return true;
     // Тут ви можете додатково обробити відповідь сервера або виконати інші дії
   } catch (error) {
-    console.error("Помилка при додаванні даних до MockAPI:", error);
+    console.error('Помилка при додаванні даних до MockAPI:', error);
   }
 };
 export async function fetchDataFromMockAPI(endpoint) {
@@ -22,10 +22,10 @@ export async function fetchDataFromMockAPI(endpoint) {
     // Обробка отриманих даних
 
     return data;
-  } catch (error) {
+  } catch (errorr) {
     // Обробка помилки
-    console.error(error);
-    throw error;
+    console.error(errorr);
+    throw errorr;
   }
 }
 export async function fetchDataByIdFromMockAPI(endpoint, id) {
@@ -52,7 +52,7 @@ export const getInternational = (origin, destination) => {
   return origin !== destination;
 };
 
-export const getcentrMap = (shipment) => {
+export const getcentrMap = shipment => {
   const centerLat =
     (shipment.originRoute.lat + shipment.destinationRoute.lat) / 2;
   const centerLng =
@@ -134,8 +134,8 @@ export function getdestinationDate(distance, originDate) {
 
 function formatDate(date) {
   const year = date.getFullYear();
-  const month = (date.getMonth() + 1).toString().padStart(2, "0");
-  const day = date.getDate().toString().padStart(2, "0");
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const day = date.getDate().toString().padStart(2, '0');
   return `${year}-${month}-${day}`;
 }
 
