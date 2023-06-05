@@ -22,10 +22,10 @@ export async function fetchDataFromMockAPI(endpoint) {
     // Обробка отриманих даних
 
     return data;
-  } catch (errorr) {
+  } catch (error) {
     // Обробка помилки
-    console.error(errorr);
-    throw errorr;
+    console.error(error);
+    throw error;
   }
 }
 export async function fetchDataByIdFromMockAPI(endpoint, id) {
