@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://alexvainahii/logikTrans/",
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.10",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.11.16",
